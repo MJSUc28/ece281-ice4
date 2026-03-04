@@ -77,7 +77,7 @@ architecture stoplight_fsm_arch of stoplight_fsm is
 begin
 	-- CONCURRENT STATEMENTS ----------------------------
 	-- Next state logic
-	  f_Q_next(0) <= (not f_Q(1) and (not i_C));
+	  f_Q_next(0) <= (not f_Q(1) and (i_C));
 	  f_Q_next(1) <= (not f_Q(1)) and ((not i_C) and f_Q(0));
 	
 	-- Output logic
